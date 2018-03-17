@@ -8,6 +8,21 @@
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel='stylesheet prefetch' href='css/css.css'>
   <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript">
+  function codeAddress() {
+    var trident = {
+      string: navigator.userAgent.match(/Trident\/(\d+)/)
+    };
+
+
+    trident.version = trident.string ? parseInt(trident.string[1], 10) : null;
+
+    if (trident.string) {
+      document.body.innerHTML = '<div style="color: #ad998a; font-size: 1rem; font-weight: 500;margin: 0 auto">This page does not support Internet Explorer. </br> Please switch to a different browser such as Chrome, Edge or Firefox.</div>';
+    }
+  }
+  window.onload = codeAddress;
+  </script>
 </head>
 
 <body>
